@@ -1,12 +1,13 @@
 import React from 'react';
 import { makeStyles } from '@mui/styles';
-import { ReactComponent as Logo } from '../resources/images/logo.svg';
+import logo from '../resources/images/logocbscompleto.jpg';
+// import { ReactComponent as Logo } from '../resources/images/logo.svg';
 
 const useStyles = makeStyles(() => ({
   image: {
     alignSelf: 'center',
-    maxWidth: '240px',
-    maxHeight: '120px',
+    maxWidth: '300px',
+    maxHeight: '180px',
     width: 'auto',
     height: 'auto',
   },
@@ -15,7 +16,8 @@ const useStyles = makeStyles(() => ({
 const LogoImage = ({ color }) => {
   const classes = useStyles();
 
-  return (<Logo className={classes.image} style={{ color }} />);
+  return (<img src={logo} className={classes.image} style={{ color }} alt="Logo" />);
+  // return (<Logo className={classes.image} style={{ color }} />);
 };
 
 export default LogoImage;
